@@ -1,25 +1,25 @@
-import * as React from 'react';
-import './App.css';
-import { Layout, Menu, Icon, Breadcrumb } from 'antd';
-const { Header, Content, Sider } = Layout;
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Timer from './Timer';
+import * as React from 'react'
+import './App.css'
+import { Layout, Menu, Icon, Breadcrumb } from 'antd'
+const { Header, Content, Sider } = Layout
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Timer from './Timer'
 
 const Dashboard = () => (
   <div>
     <h2>Dashboard</h2>
   </div>
-);
+)
 
 const About = () => (
   <div>
     <h2>About</h2>
   </div>
-);
+)
 
 const TimerEle = () => (
   <Timer />
-);
+)
 
 class App extends React.Component<{}, null> {
   render() {
@@ -97,8 +97,8 @@ class App extends React.Component<{}, null> {
           </Layout>
         </Layout>
       </Router>
-    );
+    )
   }
 }
 
-export default App;
+export default App

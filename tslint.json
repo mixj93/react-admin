@@ -41,7 +41,7 @@
             "timeEnd",
             "trace"
         ],
-        "no-consecutive-blank-lines": true,
+        "no-consecutive-blank-lines": [true, 1],
         "no-construct": true,
         "no-debugger": true,
         "no-duplicate-variable": true,
@@ -52,7 +52,7 @@
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": false,
         "no-unused-expression": true,
-        "no-use-before-declare": true,
+        "no-use-before-declare": false, // 需要类型检查，先不开启
         "one-line": [
             true,
             "check-catch",
@@ -62,10 +62,10 @@
         ],
         "quotemark": [true, "single", "jsx-double"],
         "radix": true,
-        "semicolon": [true, "always"],
+        "semicolon": [true, "never"],
         "switch-default": true,
 
-        "trailing-comma": false,
+        "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
 
         "triple-equals": [ true, "allow-null-check" ],
         "typedef": [

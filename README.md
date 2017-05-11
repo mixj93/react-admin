@@ -17,3 +17,9 @@ $ npm start
 - [React Router](https://github.com/ReactTraining/react-router)
 - [Webpack Migrating from v1 to v2](https://webpack.js.org/guides/migrating/)
 - [Mobx](https://github.com/mobxjs/mobx)
+- [Tslint rules](https://palantir.github.io/tslint/rules/)
+
+TODO:
+- 路由的最佳实践及示例
+- mobx 比较好的使用姿势及示例
+- 优化 production build 时间

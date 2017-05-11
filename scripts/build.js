@@ -90,7 +90,8 @@ function printErrors(summary, errors) {
 
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
-  console.log('Creating an optimized production build...');
+  // var date = new Date();
+  console.log('Creating an optimized production build...', new Date());
   webpack(config).run((err, stats) => {
     if (err) {
       printErrors('Failed to compile.', [err]);
@@ -107,7 +108,7 @@ function build(previousFileSizes) {
      process.exit(1);
    }
 
-    console.log(chalk.green('Compiled successfully.'));
+    console.log(chalk.green('Compiled successfully.', new Date()));
     console.log();
 
     console.log('File sizes after gzip:');
