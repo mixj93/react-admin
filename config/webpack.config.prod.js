@@ -53,9 +53,10 @@ module.exports = {
   // You can exclude the *.map files from the build during deployment.
   devtool: 'source-map',
   // In production, we only want to load the polyfills and the app code.
-  entry: {
-    main: [require.resolve('./polyfills'), paths.appIndexJs]
-  },
+  entry: [
+    require.resolve('./polyfills'),
+    paths.appIndexJs
+  ],
   output: {
     // The build folder.
     path: paths.appBuild,
@@ -225,6 +226,8 @@ module.exports = {
         screw_ie8: true
       }
     }),
+    // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
+    new ExtractTextPlugin(cssFilename),
     //-------------
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
@@ -247,8 +250,6 @@ module.exports = {
       chunks: ['vendor']
     }),
     //-----------
-    // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-    new ExtractTextPlugin(cssFilename),
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.
